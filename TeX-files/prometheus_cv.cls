@@ -20,28 +20,51 @@
  
  %%% define the \datedsubsection command %%%
 \newcommand{\datedsubsection}[4]{%	
-	\cvsubsection[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+		\hspace*{-3cm} 
+		\begin{footnotesize} 
+			#1 
+		\end{footnotesize}
 	\end{minipage}
 	\raggedright
-		
+	\hfill \small{\textlf{\scshape{#2}}}
+	
+	\vspace*{-1.2em}
+	
+	\begin{normalsize}
+		#3
+	\end{normalsize}
+	
+	\vspace*{.3em}
 	\begin{small}
 		#4
 	\end{small}
+	\vspace*{.7em}
 }
 
  %%% define the \datedsubsectionnarrow command %%%
-\newcommand{\datedsubsectionnarrow}[4]{%	
-	\cvsubsectionnarrow[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
+\newcommand{\datedsubsectionnarrow}[4]{%
+	\vspace*{.1em}
 	\begin{minipage}{5cm}
-		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+		\hspace*{-3cm} 
+		\begin{footnotesize} 
+			#1 
+		\end{footnotesize}
 	\end{minipage}
 	\raggedright
+	\hfill {\small{\textlf{\scshape{#2}}}}
 	
+	\vspace*{-1.2em}
+	
+	\begin{normalsize}
+		#3
+	\end{normalsize}
+	
+	\vspace*{.2em}
 	\begin{small}
 		#4
 	\end{small}
+	\vspace*{.2em}
 }
 
 \newcommand{\papersubsection}[2]{%	
@@ -51,7 +74,6 @@
 	\raggedright
 	\vspace{-1.2em}
 	#2%
-	
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
