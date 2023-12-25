@@ -13,6 +13,7 @@ jobs:
           latexmk_use_xelatex: true
           extra_fonts: |
             ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond-Regular.ttf
+            ${{ github.workspace }}/TeX-files/fonts/fontawesome-free-5.15.4-web.zip
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
       - name: Upload PDF file
