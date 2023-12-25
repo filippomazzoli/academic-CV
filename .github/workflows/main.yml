@@ -9,9 +9,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: TeX-files/main.tex
+          root_file: ${{ github.workspace }}/TeX-files/main.tex
           latexmk_use_xelatex: true
-          working_directory: TeX-files
+          working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
