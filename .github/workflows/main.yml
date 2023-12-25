@@ -1,0 +1,8 @@
+name: Github Action for LaTeX
+- uses: xu-cheng/latex-action@v3
+  with:
+    root_file: /TeX files/main.tex
+    latexmk_use_xelatex: true
+    working_directory: /TeX files/
+    work_in_root_file_dir: true
+          
