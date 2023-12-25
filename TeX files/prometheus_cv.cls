@@ -44,6 +44,16 @@
 	\end{small}
 }
 
+\newcommand{\papersubsection}[2]{%	
+	\begin{minipage}{5cm}
+		\hspace*{-3cm}\footnotesize #1
+	\end{minipage}
+	\raggedright
+	\vspace{-1.2em}
+	#2%
+	
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DEFINE OUR OWN SUBSECTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,4 +73,3 @@
 	{}{0em}                      
 	{}                           
 \titlespacing*{\cvsubsectionnarrow}{0pt}{0pt}{-2.5ex}
-
