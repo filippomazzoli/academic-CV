@@ -1,4 +1,4 @@
-- uses: xu-cheng/latex-action@v3
+uses: xu-cheng/latex-action@v3
   with:
     root_file: /TeX files/main.tex
     latexmk_use_xelatex: true
