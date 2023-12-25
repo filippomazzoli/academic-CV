@@ -11,10 +11,12 @@ jobs:
         with:
           root_file: ${{ github.workspace }}/TeX-files/main.tex
           latexmk_use_xelatex: true
+          extra_fonts: |
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond-Regular.ttf
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: main.pdf
+          path: ${{ github.workspace }}/CV.pdf
