@@ -28,14 +28,3 @@ jobs:
           git commit -m "commit message"
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      - name: Pushes papers.bib file
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.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 }}
-        with:
-          source_file: '${{ github.workspace }}/TeX-files/papers.bib'
-          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
-          destination_folder: '_bibliography'
-          user_email: 'filippomazzoli@me.com'
-          user_name: 'filippomazzoli'
-          commit_message: 'A custom message for the commit'
