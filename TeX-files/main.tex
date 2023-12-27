@@ -1,6 +1,6 @@
 %!TeX program = xelatex
 \documentclass{prometheus_cv}
-\usepackage[a4paper, total={5.3in, 10in}, top=2cm]{geometry}		% width=5.3in, height=10in, top margin=2cm on each page
+\usepackage[a4paper, left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}		% width=5.3in, height=10in, top margin=2cm on each page
 
 \usepackage{xcolor}	
 \usepackage{tabularx}
@@ -120,7 +120,7 @@ sorting		 = ydnt
 \DeclareFieldFormat{url}{\href{#1}{\mkbibacro{URL}}}
 
 \defbibenvironment{bibliography}
-{\begin{enumerate}[leftmargin=*,nolistsep]\setcounter{enumi}{\value{publicationCounter}}}
+{\begin{enumerate}[leftmargin=*,itemsep=0.1em]\setcounter{enumi}{\value{publicationCounter}}}
 	{\setcounter{publicationCounter}{\value{enumi}} \end{enumerate}}
 {\item}
 
@@ -184,16 +184,16 @@ sorting		 = ydnt
 \datedsubsection{Jan 2019 -- March 2019}{University of Southern California}{Supervised by Francis Bonahon.}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%% TEACHING  %%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Teaching}
-\input{teaching.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% TALKS  %%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Invited Talks}
 \input{talks.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TEACHING  %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching}
+\input{teaching.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% MENTORING AND OUTREACH  %%%%%%%%%%%% 
