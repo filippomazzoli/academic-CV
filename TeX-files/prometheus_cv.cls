@@ -7,64 +7,43 @@
 
 % We customise the \section command 
 \titleformat{\section}         
-  {\large\scshape\raggedright} % Make the \section headers large, small caps and left aligned
-  {}{0em}                      % No label (prefix) and no horizontal separation between label and title body
-  {}                           		% Code preceeding the title body
-  [\titlerule]                 % Code following the title body. Here a horizontal line.
- 
- % We also slightly update \subsection command
- \titleformat{\subsection}
- {\normalsize\scshape\raggedright}
- {}{0em}
- {}
- 
- %%% define the \datedsubsection command %%%
+{\large\scshape\raggedright} % Make the \section headers large, small caps and left aligned
+{}{0em}                      % No label (prefix) and no horizontal separation between label and title body
+{}                           		% Code preceeding the title body
+[\titlerule]                 % Code following the title body. Here a horizontal line.
+
+% We also slightly update \subsection command
+\titleformat{\subsection}
+{\normalsize\scshape\raggedright}
+{}{0em}
+{}
+
+%%% define the \datedsubsection command %%%
 \newcommand{\datedsubsection}[4]{%	
+	\cvsubsection[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\hspace*{-3cm} 
-		\begin{footnotesize} 
-			#1 
-		\end{footnotesize}
+		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
 	\end{minipage}
 	\raggedright
-	\hfill \small{\textlf{\scshape{#2}}}
 	
-	\vspace*{-1.2em}
-	
-	\begin{normalsize}
-		#3
-	\end{normalsize}
-	
-	\vspace*{.3em}
 	\begin{small}
 		#4
 	\end{small}
-	\vspace*{.7em}
 }
 
- %%% define the \datedsubsectionnarrow command %%%
-\newcommand{\datedsubsectionnarrow}[4]{%
-	\vspace*{.1em}
+%%% define the \datedsubsectionnarrow command %%%
+\newcommand{\datedsubsectionnarrow}[4]{%	
+	\cvsubsectionnarrow[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\hspace*{-3cm} 
-		\begin{footnotesize} 
-			#1 
-		\end{footnotesize}
+		\vspace*{-.9ex}\hspace*{-3cm}\footnotesize #1
 	\end{minipage}
 	\raggedright
-	\hfill {\small{\textlf{\scshape{#2}}}}
 	
-	\vspace*{-1.2em}
-	
-	\begin{normalsize}
-		#3
-	\end{normalsize}
-	
-	\vspace*{.2em}
+	\vspace{-0.3em}
 	\begin{small}
 		#4
 	\end{small}
-	\vspace*{.2em}
+	\vspace{0.2em}
 }
 
 \newcommand{\papersubsection}[2]{%	
@@ -76,22 +55,49 @@
 	#2%
 }
 
+
+\newcommand{\conference}[4]{%	
+	\cvsubsectionnarrow[#2]{\emph{#3}, {\footnotesize
+			#4.} \hfill \small{\textlf{\scshape{#2}}}}%
+	\begin{minipage}{5cm}
+		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+	\end{minipage}
+}
+
+
+\newcommand{\course}[4]{%	
+	\cvsubsectionnarrow[#2]{#3, {\footnotesize #4.} \hfill \small{\textlf{\scshape{#2}}}}%
+	\begin{minipage}{5cm}
+		\vspace*{-.8ex}\hspace*{-3cm}\footnotesize #1
+	\end{minipage}
+}
+
+\newcommand{\phone}[1]{%
+	\begin{tiny}\faPhone[regular]\end{tiny}~{\small#1}%
+}
+
+\newcommand{\email}[1]{%
+	\begin{tiny}\faEnvelope[regular]\end{tiny}~{\small\href{mailto:#1}{#1}}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DEFINE OUR OWN SUBSECTIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcounter{cvsubsection}
 \titleclass{\cvsubsection}{straight}[\part]
 \titleformat{\cvsubsection}         
-	{\raggedright} 
-	{}{0em}                      
-	{}                           
+{\raggedright} 
+{}{0em}                      
+{}                           
 \titlespacing*{\cvsubsection}{0pt}{3.5ex plus 1ex minus .2ex}{-2.5ex}
 
 % The same but in narrow 
 \newcounter{cvsubsectionnarrow}
 \titleclass{\cvsubsectionnarrow}{straight}[\part]
 \titleformat{\cvsubsectionnarrow}         
-	{\raggedright} 
-	{}{0em}                      
-	{}                           
+{\raggedright} 
+{}{0em}                      
+{}                           
 \titlespacing*{\cvsubsectionnarrow}{0pt}{0pt}{-2.5ex}
+
+
