@@ -12,9 +12,17 @@ jobs:
           root_file: ${{ github.workspace }}/TeX-files/main.tex
           latexmk_use_xelatex: true
           extra_fonts: |
-            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond-Regular.ttf
-            ${{ github.workspace }}/TeX-files/fonts/fontawesome-free-5.15.4-web.zip
-            ${{ github.workspace }}/TeX-files/fonts/academicons-1.9.4.zip
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Regular.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Bold.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-BoldItalic.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Italic.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Light.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-LightItalic.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Medium.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-MediumItalic.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-Regular.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-SemiBold.ttf
+            ${{ github.workspace }}/TeX-files/fonts/CormorantGaramond/CormorantGaramond-SemiBoldItalic.ttf
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
       - name: Check pdf file
