@@ -16,8 +16,8 @@ jobs:
       - name: Trigger child repo workflow
         uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
-          owner: husnain581
-          repo: child_repo
+          owner: filippomazzoli
+          repo: filippomazzoli.github.io
           github_token: ${{ secrets.AUTH_TOKEN }}
           workflow_file_name: child_workflow.yml
           ref: main
