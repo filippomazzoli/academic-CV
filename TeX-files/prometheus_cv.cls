@@ -22,7 +22,7 @@
 \newcommand{\datedsubsection}[4]{%	
 	\cvsubsection[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+		\vspace*{-.7ex}\hspace*{-2.7cm}\footnotesize #1
 	\end{minipage}
 	\raggedright
 	
@@ -35,7 +35,7 @@
 \newcommand{\datedsubsectionnarrow}[4]{%	
 	\cvsubsectionnarrow[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\vspace*{-.9ex}\hspace*{-3cm}\footnotesize #1
+		\vspace*{-.9ex}\hspace*{-2.7cm}\footnotesize #1
 	\end{minipage}
 	\raggedright
 	
@@ -48,7 +48,7 @@
 
 \newcommand{\papersubsection}[2]{%	
 	\begin{minipage}{5cm}
-		\hspace*{-3cm}\footnotesize #1
+		\hspace*{-2.7cm}\footnotesize #1
 	\end{minipage}
 	\raggedright
 	\vspace{-1.2em}
@@ -60,7 +60,7 @@
 	\cvsubsectionnarrow[#2]{\emph{#3}, {\footnotesize
 			#4.} \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+		\vspace*{-.7ex}\hspace*{-2.7cm}\footnotesize #1
 	\end{minipage}
 }
 
@@ -68,7 +68,7 @@
 \newcommand{\course}[4]{%	
 	\cvsubsectionnarrow[#2]{#3, {\footnotesize #4.} \hfill \small{\textlf{\scshape{#2}}}}%
 	\begin{minipage}{5cm}
-		\vspace*{-.8ex}\hspace*{-3cm}\footnotesize #1
+		\vspace*{-.8ex}\hspace*{-2.7cm}\footnotesize #1
 	\end{minipage}
 }
 

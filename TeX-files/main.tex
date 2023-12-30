@@ -62,11 +62,7 @@ maxbibnames	 = 99,
 defernumbers = true
 ]{biblatex}
 
-\addbibresource{papers.bib}
-
-\renewbibmacro{in:}{}
-
-\DeclareSortingScheme{ymdnt}{
+\DeclareSortingTemplate{ymdnt}{
 	\sort{
 		\field{presort}
 	}
@@ -95,6 +91,10 @@ defernumbers = true
 		\field{title}
 	}
 }
+
+\addbibresource{papers.bib}
+
+\renewbibmacro{in:}{}
 
 
 % Uncomment this if you need a final period for your entries and do not
@@ -216,7 +216,7 @@ Born on November \nth{21}, 1992 in Firenze (FI), Italy. Italian citizen. Pronoun
 
 \section{Long Research Visit}
 
-\datedsubsection{Jan 2019 -- March 2019}{University of Southern California}{Supervised by Francis Bonahon.}{}
+\datedsubsection{Jan 2019 -- Mar 2019}{University of Southern California}{Supervised by Francis Bonahon.}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% TALKS  %%%%%%%%%%%% 
