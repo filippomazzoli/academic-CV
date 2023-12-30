@@ -73,7 +73,7 @@
 }
 
 \newcommand{\phone}[1]{%
-	\begin{tiny}\faPhone[regular]\end{tiny}~{\small#1}%
+	\begin{tiny}\faPhone[solid]\end{tiny}~{\small#1}%
 }
 
 \newcommand{\email}[1]{%
