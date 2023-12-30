@@ -1,4 +1,4 @@
-name: 'Update webpage'
+name: 'Trigger updates on my webpage'
 
 on:
   push:
@@ -9,10 +9,10 @@ jobs:
   trigger_workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Workflow name
+      - name: Telling my webpage to update
         shell: bash
         run: |
-          echo "I am Workflow of Parent REPO"
+          echo "I triggered the update, now we wait"
       - uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
           owner: filippomazzoli
