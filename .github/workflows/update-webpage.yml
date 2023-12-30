@@ -9,11 +9,8 @@ jobs:
   trigger_workflow:
     runs-on: ubuntu-latest
     steps:
-      - name: Telling my webpage to update
-        shell: bash
-        run: |
-          echo "I triggered the update, now we wait"
-      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+      - name: Telling my webpage to update, now we wait
+        uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
           owner: filippomazzoli
           repo: filippomazzoli.github.io
