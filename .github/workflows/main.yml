@@ -16,6 +16,9 @@ jobs:
             ${{ github.workspace }}/TeX-files/fonts/*.otf
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
+  save_pdf:
+    needs: build_latex
+    runs-on: ubuntu-latest
       - name: Check pdf file
         run: |
           file ${{ github.workspace }}/TeX-files/main.pdf | grep -q ' PDF '
