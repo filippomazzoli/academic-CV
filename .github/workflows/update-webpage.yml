@@ -1,4 +1,4 @@
-name: 'Workflow of Parent REPO'
+name: 'Update webpage'
 
 on:
   push:
