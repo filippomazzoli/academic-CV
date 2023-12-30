@@ -19,6 +19,7 @@ jobs:
   save_pdf:
     needs: build_latex
     runs-on: ubuntu-latest
+    steps:
       - name: Check pdf file
         run: |
           file ${{ github.workspace }}/TeX-files/main.pdf | grep -q ' PDF '
