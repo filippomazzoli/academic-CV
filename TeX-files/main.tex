@@ -26,7 +26,8 @@
 \setmainfont[
 	BoldFont=Cormorant Garamond Bold,
 	ItalicFont=Cormorant Garamond Italic,
-	BoldItalicFont=Cormorant Garamond Bold Italic
+	BoldItalicFont=Cormorant Garamond Bold Italic,
+	SmallCapsFont=CormorantSC-Regular%
 ]{Cormorant Garamond Regular}						% Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
 \newfontfamily\GaramondLight{Cormorant Garamond Light}
 \newcommand\textlf[1]{{\GaramondLight#1}}
@@ -58,7 +59,8 @@ maxcitenames = 99,
 isbn         = false,
 url          = true,
 maxbibnames	 = 99,
-sorting		 = ydnt
+sorting		 = ydnt,
+defernumbers = true
 ]{biblatex}
 
 \addbibresource{papers.bib}
