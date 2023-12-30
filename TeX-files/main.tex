@@ -59,13 +59,42 @@ maxcitenames = 99,
 isbn         = false,
 url          = true,
 maxbibnames	 = 99,
-sorting		 = ydnt,
 defernumbers = true
 ]{biblatex}
 
 \addbibresource{papers.bib}
 
 \renewbibmacro{in:}{}
+
+\DeclareSortingScheme{ymdnt}{
+	\sort{
+		\field{presort}
+	}
+	\sort[final]{
+		\field{sortkey}
+	}
+	\sort[direction=descending]{
+		\field[strside=left,strwidth=4]{sortyear}
+		\field[strside=left,strwidth=4]{year}
+		\literal{9999}
+	}
+	\sort[direction=descending]{
+		\field{month}
+		\literal{9999}
+	}
+	\sort{
+		\field{sortname}
+		\field{author}
+		\field{editor}
+		\field{translator}
+		\field{sorttitle}
+		\field{title}
+	}
+	\sort{
+		\field{sorttitle}
+		\field{title}
+	}
+}
 
 
 % Uncomment this if you need a final period for your entries and do not
