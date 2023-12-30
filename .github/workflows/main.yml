@@ -16,14 +16,10 @@ jobs:
             ${{ github.workspace }}/TeX-files/fonts/*.otf
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
-  save_pdf:
-    needs: build_latex
-    runs-on: ubuntu-latest
-    steps:
       - name: Check pdf file
         run: |
           file ${{ github.workspace }}/TeX-files/main.pdf | grep -q ' PDF '
-      - name: Upload file to repository
+      - name: Upload pdf. file to repository
         run: |
           git config --global user.name "filippomazzoli"
           git config --global user.email "filippomazzoli@me.com"
@@ -32,7 +28,7 @@ jobs:
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
   trigger_workflow:
-    needs: save_pdf
+    needs: build_latex
     runs-on: ubuntu-latest
     steps:
       - name: Telling my webpage to update, now we wait
