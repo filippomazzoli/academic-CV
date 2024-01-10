@@ -35,6 +35,7 @@ jobs:
           source_file: 'TeX-files/papers.bib'
           destination_repo: 'filippomazzoli/filippomazzoli.github.io'
           destination_folder: '_bibliography'
+          destination_branch: master
           user_email: 'filippomazzoli@me.com'
           user_name: 'filippomazzoli'
       - name: Pushes updated CV file to my academic webpage
@@ -45,5 +46,6 @@ jobs:
           source_file: 'TeX-files/main.pdf'
           destination_repo: 'filippomazzoli/filippomazzoli.github.io'
           destination_folder: 'assets/pdf'
+          destination_branch: master
           user_email: 'filippomazzoli@me.com'
           user_name: 'filippomazzoli'
