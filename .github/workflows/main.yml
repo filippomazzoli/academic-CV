@@ -38,7 +38,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: 'TeX-files/papers.bib'
+          source_file: '${{ github.workspace }}/TeX-files/papers.bib'
           destination_repo: 'filippomazzoli/filippomazzoli.github.io'
           destination_folder: '_bibliography'
           destination_branch: master
@@ -49,7 +49,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: 'TeX-files/main.pdf'
+          source_file: '${{ github.workspace }}/TeX-files/main.pdf'
           destination_repo: 'filippomazzoli/filippomazzoli.github.io'
           destination_folder: 'assets/pdf'
           destination_branch: master
