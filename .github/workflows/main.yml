@@ -16,6 +16,11 @@ jobs:
             ${{ github.workspace }}/TeX-files/fonts/*.otf
           working_directory: ${{ github.workspace }}/TeX-files/
           work_in_root_file_dir: true
+          
+  push_pdf:
+    needs: build_latex
+    runs-on: ubuntu-latest
+    steps:
       - name: Check pdf file
         run: |
           file ${{ github.workspace }}/TeX-files/main.pdf | grep -q ' PDF '
@@ -25,8 +30,14 @@ jobs:
           git config --global user.email "filippomazzoli@me.com"
           git add ${{ github.workspace }}/TeX-files/main.pdf
           git commit -m "commit message"
+          git pull
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        
+  push_to_webpage:
+    needs: push_pdf
+    runs-on: ubuntu-latest
+    steps:
       - name: Pushes bibliography file to my academic webpage
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
