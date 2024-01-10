@@ -25,14 +25,10 @@ jobs:
           git config --global user.email "filippomazzoli@me.com"
           git add ${{ github.workspace }}/TeX-files/main.pdf
           git commit -m "commit message"
+          git config pull.rebase false
           git pull
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        
-  push_to_webpage:
-    needs: build_latex
-    runs-on: ubuntu-latest
-    steps:
       - name: Pushes bibliography file to my academic webpage
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
