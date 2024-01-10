@@ -27,3 +27,23 @@ jobs:
           git commit -m "commit message"
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      - name: Pushes bibliography file to my academic webpage
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'TeX-files/papers.bib'
+          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
+          destination_folder: '_bibliography'
+          user_email: 'filippomazzoli@me.com'
+          user_name: 'filippomazzoli'
+      - name: Pushes updated CV file to my academic webpage
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'TeX-files/main.pdf'
+          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
+          destination_folder: 'assets/pdf'
+          user_email: 'filippomazzoli@me.com'
+          user_name: 'filippomazzoli'
