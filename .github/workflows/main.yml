@@ -25,6 +25,7 @@ jobs:
           git config --global user.email "filippomazzoli@me.com"
           git add ${{ github.workspace }}/TeX-files/main.pdf
           git commit -m "commit message"
+          git config pull.rebase false
           git pull
           git push
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
