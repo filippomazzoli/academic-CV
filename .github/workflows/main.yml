@@ -19,35 +19,35 @@ jobs:
       - name: Check pdf file
         run: |
           file ${{ github.workspace }}/TeX-files/main.pdf | grep -q ' PDF '
-      - name: Upload pdf. file to repository
-        run: |
-          git config --global user.name "filippomazzoli"
-          git config --global user.email "filippomazzoli@me.com"
-          git add ${{ github.workspace }}/TeX-files/main.pdf
-          git commit -m "commit message"
-          git config pull.rebase false
-          git pull
-          git push
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      - name: Pushes bibliography file to my academic webpage
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: '${{ github.workspace }}/TeX-files/papers.bib'
-          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
-          destination_folder: '_bibliography'
-          destination_branch: master
-          user_email: 'filippomazzoli@me.com'
-          user_name: 'filippomazzoli'
-      - name: Pushes updated CV file to my academic webpage
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: '${{ github.workspace }}/TeX-files/main.pdf'
-          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
-          destination_folder: 'assets/pdf'
-          destination_branch: master
-          user_email: 'filippomazzoli@me.com'
-          user_name: 'filippomazzoli'
+#      - name: Upload pdf. file to repository
+#        run: |
+#          git config --global user.name "filippomazzoli"
+#          git config --global user.email "filippomazzoli@me.com"
+#          git add ${{ github.workspace }}/TeX-files/main.pdf
+#          git commit -m "commit message"
+#          git config pull.rebase false
+#          git pull
+#          git push
+#        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+#      - name: Pushes bibliography file to my academic webpage
+#        uses: dmnemec/copy_file_to_another_repo_action@main
+#        env:
+#          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#        with:
+#          source_file: '${{ github.workspace }}/TeX-files/papers.bib'
+#          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
+#          destination_folder: '_bibliography'
+#          destination_branch: master
+#          user_email: 'filippomazzoli@me.com'
+#          user_name: 'filippomazzoli'
+#      - name: Pushes updated CV file to my academic webpage
+#        uses: dmnemec/copy_file_to_another_repo_action@main
+#        env:
+#          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+#        with:
+#          source_file: '${{ github.workspace }}/TeX-files/main.pdf'
+#          destination_repo: 'filippomazzoli/filippomazzoli.github.io'
+#          destination_folder: 'assets/pdf'
+#          destination_branch: master
+#          user_email: 'filippomazzoli@me.com'
+#          user_name: 'filippomazzoli'
