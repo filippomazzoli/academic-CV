@@ -2,6 +2,8 @@
 \documentclass{prometheus_cv}
 \usepackage[a4paper, left=3.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}		% width=5.3in, height=10in, top margin=2cm on each page
 
+\usepackage{amsmath,amssymb}
+
 \usepackage{xcolor}	
 \definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
 
@@ -24,12 +26,14 @@
 
 \usepackage{fontspec}							% package to change fonts				
 \setmainfont[
-	BoldFont=Cormorant Garamond Bold,
-	ItalicFont=Cormorant Garamond Italic,
-	BoldItalicFont=Cormorant Garamond Bold Italic,
+	Path = ./fonts/, % Path to your subfolder (include trailing slash)
+	Extension = .ttf, 
+	BoldFont=CormorantGaramond-Bold,
+	ItalicFont=CormorantGaramond-Italic,
+	BoldItalicFont=CormorantGaramond-BoldItalic,
 	SmallCapsFont=CormorantSC-Regular%
-]{Cormorant Garamond Regular}						% Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
-\newfontfamily\GaramondLight{Cormorant Garamond Light}
+]{CormorantGaramond-Regular}						% Set the main font to Comorant Garamond (https://github.com/CatharsisFonts/Cormorant)
+\newfontfamily\GaramondLight{CormorantGaramond-Light}
 \newcommand\textlf[1]{{\GaramondLight#1}}
 
 \newcommand{\highlight}[1]{\textcolor{highlight}{\textbf{#1}}}		% highlight text as bold and with the highlight color defined above
